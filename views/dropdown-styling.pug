@@ -1,0 +1,132 @@
+style.
+
+	/* ----------------------------------------------------------------
+		POSITIONING OF QUESTIONS 
+	---------------------------------------------------------------- */
+	
+	.questionbox {
+	  position: absolute;
+	  left: 50%;
+	  -webkit-transform: translate(-50%, -50%);
+	  -moz-transform: translate(-50%, -50%);
+	  -ms-transform: translate(-50%, -50%);
+	  -o-transform: translate(-50%, -50%);
+	  transform: translate(-50%, -50%);
+	  min-width: 350px;
+	  max-width: 600px;
+	  width: 50vw;
+	  height: 370px;
+	  font-weight: 600;
+	}	
+
+	.Q1 { top: 350px; }
+	.Q2 { top: 420px; }
+	.Q3 { top: 490px; }
+	.Q4 { top: 560px; }
+	.Q5 { top: 630px; }
+
+	/*positioning of input fields relative to parent*/
+	.questionbox .input-7 { top: 480px; }
+	.questionbox .input-6 { top: 410px; }
+	.questionbox .input-5 { top: 340px; }
+	.questionbox .input-4 { top: 270px; }
+	.questionbox .input-3 { top: 200px; }
+	.questionbox .input-2 { top: 130px; }
+	.questionbox .input-1 { top: 60px; }
+	
+	.questionbox > div {
+	  padding: 15px 15px 8px 20px;
+	  position: absolute;
+	  width: 100%;
+	  font-size: 1.25rem;
+	}
+	
+	/* setting the cursor to be a pointer */ 
+	.questionbox > div.input-preview:hover { cursor: pointer; }
+	.questionbox > div.unhidden:hover { cursor: pointer; }
+	.questionbox > div > label > span:hover { cursor: pointer; }
+
+	/* ----------------------------------------------------------------
+		STYLING OF INPUT FIELDS 
+	---------------------------------------------------------------- */
+
+	.questionbox > div.input-Q1 {
+	  background: #fff;
+	  color: #777;
+	  border-radius: 2px;
+	  box-shadow: 0 2px 15px 3px rgba(0, 0, 0, 0.1);
+	}
+
+	.questionbox > div.input-Q2 {
+	  background: #fff;
+	  color: #777;
+	  border-radius: 2px;
+	  box-shadow: 0 2px 15px 3px rgba(0, 0, 0, 0.1);
+	}
+
+	.questionbox > div.input-Q3 {
+	  background: #fff;
+	  color: #777;
+	  border-radius: 2px;
+	  box-shadow: 0 2px 15px 3px rgba(0, 0, 0, 0.1);
+	}
+
+	.questionbox > div.input-Q4 {
+	  background: #fff;
+	  color: #777;
+	  border-radius: 2px;
+	  box-shadow: 0 2px 15px 3px rgba(0, 0, 0, 0.1);
+	}
+
+	.questionbox > div.input-Q5 {
+	  background: #fff;
+	  color: #777;
+	  border-radius: 2px;
+	  box-shadow: 0 2px 15px 3px rgba(0, 0, 0, 0.1);
+	}
+
+	/* styling of chosen input */
+	.questionbox > div.input-Q1.active { color: #67d1a6; }
+	.questionbox > div.input-Q2.active { color: #67d1a6; }
+	.questionbox > div.input-Q3.active { color: #67d1a6; }
+	.questionbox > div.input-Q4.active { color: #67d1a6; }
+	.questionbox > div.input-Q5.active { color: #67d1a6; }
+
+	/* ----------------------------------------------------------------
+		STYLING OF QUESTIONS
+	---------------------------------------------------------------- */
+
+	/* styling of question */
+	.questionbox > div.input-preview {
+	  color: rgba(255, 255, 255, 0.75);
+	  position: relative;
+	  transition: .3s all ease;
+	}
+
+	/* after question is clicked, make font more opaque */
+	.questionbox > div.input-preview.active {
+	  color: white;
+	}
+
+	/* polygon styling before clicked */
+	.questionbox > div.input-preview:before {
+	  content: "";
+	  position: absolute;
+	  top: 18px;
+	  right: 20px;
+	  bottom: 20px;
+	  width: 20px;
+	  background: rgba(255, 255, 255, 0.75);
+	  -webkit-clip-path: polygon(50% 73%, 0 0, 100% 0);
+	  clip-path: polygon(50% 73%, 0 0, 100% 0);
+	  padding: 10px;
+	  box-sizing: border-box;
+	  transition: .3s all ease;
+	}
+
+	/* polygon styling after clicked */
+	.questionbox > div.input-preview.active:before {
+		background: white;
+		-webkit-clip-path: polygon(50% 0, 0 73%, 100% 73%);
+		clip-path: polygon(50% 0, 0 73%, 100% 73%);
+	}

@@ -1,0 +1,187 @@
+extends layout
+
+block content
+	//- LOADING SCREEN (only visible when quiz-button is clicked)
+	div.container
+		div.loader-wrapper
+			div.mask
+			div.animation
+				div.spinner
+					div.dot1
+					div.dot2
+	
+	//- HEADER SECTION
+	div.col-12.col-sm-12
+		div.row
+			div.header-wrapper
+				img.header-image(src="/images/header-image.png" alt="header-image")
+				div.container
+					div.heading-text
+						h1 Het antwoord als je geen idee hebt wat je wil eten.
+						br
+						div.small-text
+							br
+							p Telkens iets nieuws verzinnen is best lastig. En als je het al niet weet, helpt de vraag: "Heb je zin in pasta, of rijst?" ook niet. Daarom selecteert de Wat Eten We app de beste recepten, gebaseerd op jouw huidige 'mood'. Nieuwschierig? Probeer het!
+						br
+						br
+						a(href="#quiz")
+							button.btn.start-btn Let's get started!
+	//- ABOUT SECTION
+	div.col-12.col-sm-12
+		div.row.bg-white
+			div.container
+				div#about.row
+					div.col-12.col-sm-12.col-md-4.col-lg-4.about-wrapper
+						br
+						br
+						br
+						br
+						img.img-about(src="/images/icons-1.png" alt="surprise")
+						br
+						br
+						br
+						br
+						h5.text-center Verassende resultaten
+						p.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum repellendus iste temporibus non in reiciendis laborum facere tempore quae nesciunt porro earum, soluta nam possimus placeat quasi magni fugit quia aspernatur facilis ratione quo dolore.
+					div.col-12.col-sm-12.col-md-4.col-lg-4.about-wrapper
+						br
+						br
+						br
+						br
+						img.img-about(src="/images/icons-2.png" alt="cooking")
+						br
+						br
+						br
+						br
+						br
+						h5.text-center Nooit meer hetzelfde koken
+						p.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum repellendus iste temporibus non in reiciendis laborum facere tempore quae nesciunt porro earum, soluta nam possimus placeat quasi magni fugit quia aspernatur facilis ratione quo dolore.
+					div.col-12.col-sm-12.col-md-4.col-lg-4.about-wrapper
+						br
+						br
+						br
+						br
+						img.img-about(src="/images/icons-3.png" alt="posibilities")
+						br
+						br
+						br
+						br
+						h5.text-center Meer dan 576 mogelijkheden
+						p.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum repellendus iste temporibus non in reiciendis laborum facere tempore quae nesciunt porro earum, soluta nam possimus placeat quasi magni fugit quia aspernatur facilis ratione quo dolore.
+				br
+				br
+	
+	//- QUIZ SECTION
+	div.col-12.col-sm-12
+		div#quiz.row
+			div.logo-wrapper
+				img(src="/images/logo1.png" alt="logo")
+			form(action="/filter" method="post")
+
+				//- QUESTION ONE ------------------------------------------
+				div.questionbox.Q1
+					div.selected-input.input-preview.input-preview-Q1 Ik eet samen met...
+					div.input-Q1.input-1(data-val="Ik eet met vrienden") 
+						label
+							input(type="checkbox" value="friends" name="Q1")
+							span#input-Q1 Vrienden
+					div.input-Q1.input-2(data-val="Ik eet met m'n huisgenoten") 
+						label
+							input(type="checkbox" value="students" name="Q1")
+							span#input-Q1 M'n huisgenoten
+					div.input-Q1.input-3(data-val="Ik eet met mijn rela/scharrel")
+						label
+							input(type="checkbox" value="rela" name="Q1")
+							span#input-Q1 Mijn rela/scharrel
+					div.input-Q1.input-4(data-val="Ik eet met mezelf")
+						label
+							input(type="checkbox" value="me" name="Q1")
+							span#input-Q1 Mezelf
+				
+				//- QUESTION TWO ------------------------------------------
+				div.questionbox.Q2
+					div.selected-input.input-preview.input-preview-Q2 En...
+					div.input-Q2.input-1(data-val="En ik heb een stressvolle dag")
+						label
+							input(type="checkbox" value="stress" name="Q2")
+							span#input-Q2 Ik heb een stressvolle dag
+					div.input-Q2.input-2(data-val="En ik heb fucking HONGER")
+						label
+							input(type="checkbox" value="hungry" name="Q2")
+							span#input-Q2 Ik heb fucking HONGER
+					div.input-Q2.input-3(data-val="En ik voel me top!")
+						label
+							input(type="checkbox" value="great" name="Q2")
+							span#input-Q2 Ik voel me top!
+					div.input-Q2.input-4(data-val="En ik ben verdrietig")
+						label
+							input(type="checkbox" value="sad" name="Q2")
+							span#input-Q2 I want to eat my feelings
+
+				//- QUESTION THREE -----------------------------------------
+				div.questionbox.Q3
+					div.selected-input.input-preview.input-preview-Q3 Ik ben...
+					div.input-Q3.input-1(data-val="Maar ik eet geen dode dieren")
+						label
+							input(type="checkbox" value="vega" name="Q3")
+							span#input-Q3 Vegetarisch
+					div.input-Q3.input-2(data-val="Maar ik doe gewoon normaal")
+						label
+							input(type="checkbox" value="normal" name="Q3")
+							span#input-Q3 Redelijk normaal
+					div.input-Q3.input-3(data-val="Maar ik eet alleen maar planten")
+						label
+							input(type="checkbox" value="vegan" name="Q3")
+							span#input-Q3 Veganistisch
+				
+				//- QUESTION FOUR -----------------------------------------
+				div.questionbox.Q4
+					div.selected-input.input-preview.input-preview-Q4 De kleur van mijn bankrekeningsaldo...
+					div.input-Q4.input-1(data-val="Ik ben een skeere tatta")
+						label
+							input(type="checkbox" value="budget" name="Q4")
+							span#input-Q4 Is rood.
+					div.input-Q4.input-2(data-val="Ik ben niet super skeer")
+						label
+							input(type="checkbox" value="no" name="Q4")
+							span#input-Q4 Is groen
+					div.input-Q4.input-3(data-val="Honger kent geen prijs")
+						label
+							input(type="checkbox" value="no" name="Q4")
+							span#input-Q4 Honger kent geen prijs.
+
+				//- QUESTION FIVE -----------------------------------------
+				div.questionbox.Q5
+					div.selected-input.input-preview.input-preview-Q5 En tenslotte...
+					div.input-Q5.input-1(data-val="En ik ben een echte hollander")
+						label
+							input(type="checkbox" value="dutch" name="Q5")
+							span#input-Q5 Ben ik een echte hollander
+					div.input-Q5.input-2(data-val="En ik kan niet koken")
+						label
+							input(type="checkbox" value="cook" name="Q5")
+							span#input-Q5 Kan ik niet koken
+					div.input-Q5.input-3(data-val="En ik wil verrast worden")
+						label
+							input(type="checkbox" value="surprise" name="Q5")
+							span#input-Q5 Laat ik me graag verrassen
+					div.input-Q5.input-4(data-val="En salades zijn voor konijnen")
+						label
+							input(type="checkbox" value="salads" name="Q5")
+							span#input-Q5 Zijn salades voor konijnen
+					div.input-Q5.input-5(data-val="En ik heb geen oven")
+						label
+							input(type="checkbox" value="oven" name="Q5")
+							span#input-Q5 Heb ik geen oven
+					div.input-Q5.input-6(data-val="En ben ik te dik")
+						label
+							input(type="checkbox" value="fat" name="Q5")
+							span#input-Q5 Ben ik te dik
+					div.input-Q5.input-7(data-val="En ben ik fan van Nicholas Cage")
+						label
+							input(type="checkbox" value="" name="Q5")
+							span#input-Q5 Ben ik fan van Nicholas Cage
+			
+				//- SUBMIT BUTTON -----------------------------------------
+				button#submit-btn(type="submit") Wat eet ik vanavond?
+	

@@ -1,0 +1,88 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		title Wat Eten We
+		link(rel="stylesheet" href="/css/bootstrap.css") 
+		link(rel="stylesheet" href="/css/fonts/fonts.css")
+		link(rel="stylesheet" href="/css/style.css")
+		link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css")
+		link(rel="icon" type="image/png" href="/images/icon.png" sizes="32x32")
+
+		//- Animated dropdown CSS needs to be included as inline .pug file, otherwise it cannot access the prefixfree library
+		include dropdown-styling.pug
+
+	body
+		header 
+			div.navbar-wrapper
+				nav.navbar.navbar-expand-lg.navbar-dark
+					div.container
+						a.navbar-brand(href="/")
+							img(src="/images/logo1.png" width="220" heigth="50" alt="logo")
+						button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation")
+							span.navbar-toggler-icon
+						div#navbarNavAltMarkup.collapse.navbar-collapse
+							div.navbar-nav.ml-auto
+								a.nav-item.nav-link.nav-coloring(href="#" style="color: white;") FAQ
+								a.nav-item.nav-link.nav-coloring(href="#about" style="color: white;") About
+								a.nav-item.nav-link.nav-coloring(href="#" style="color: white;") Contact
+		main
+
+			block content
+
+		footer.footer-columns
+			div.footer-left
+				img(src="/images/logo1.png" width="280" heigth="50" alt="logo")
+				br
+				p 
+					span Het antwoord als je geen idee hebt wat je wil eten.
+				p.footer-links
+					a(href='#') Home •  
+					a.padded(href='#') FAQ • 
+					a.padded(href='#') About • 
+					a.padded(href='#') Disclaimer
+				p.footer-copyright Nova Eeken &copy; 2017
+			div.footer-center
+				div
+					i.fa.fa-map-marker
+					p
+						span 21 Revolution Street
+						| Utrecht, Nederland
+				div
+					i.fa.fa-phone
+					p +31 6 12341234
+				div
+					i.fa.fa-envelope
+					p
+						a(href='mailto:support@company.com') info@watetenwe.nl
+			div.footer-right
+				p.footer-disclaimer
+					span Disclaimer
+					| Bij het weergeven van suggesties wordt gebruik gemaakt van de recepten van derden. ‘Wat Eten We’ aanvaardt daarom geen aansprakelijkheid of verantwoordelijkheid voor de inhoud, het gebruik, of de beschikbaarheid van recepten waarnaar wordt verwezen. 
+					a(href='#') Lees hier meer.
+				.footer-icons
+					a(href='#')
+						i.fa.fa-facebook
+					a(href='#')
+						i.fa.fa-twitter
+					a(href='https://www.linkedin.com/in/novaeeken')
+						i.fa.fa-linkedin
+					a(href='https://github.com/novaeeken')
+						i.fa.fa-github
+	
+	script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js')
+	script(src='/js/bootstrap.js')
+	//- libraries for animated dropdown questions 
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js")
+	script(src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/TextPlugin.min.js")
+	//- own scripts
+	script(src="/js/q1.js")
+	script(src="/js/q2.js")
+	script(src="/js/q3.js")
+	script(src="/js/q4.js")
+	script(src="/js/q5.js")
+	script(src="/js/smoothscroll.js")
+	script(src="/js/main.js")

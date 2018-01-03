@@ -1,0 +1,27 @@
+extends layout
+
+block content
+	div.container
+		div.row
+			div.col-12
+				div.space
+					br
+					br
+		div.row
+			each recipe in recipes
+				div.col-12.col-sm-12.col-md-6.col-lg-4
+					div.recipe-wrapper
+						if recipe.title.length < 28
+							h5.small-title= recipe.title
+						else
+							h5.title= recipe.title
+						a(href=recipe.recipeLink)
+							div.zoomframe
+								img.img-fluid.recipe-img(src=recipe.imageLink)
+		br
+		br
+		div.bottom
+			h3 Toch niks gevonden? Probeer het 
+				a#bottom-link(href="/#quiz") nog eens.
+		br
+		br
