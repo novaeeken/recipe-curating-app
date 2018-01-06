@@ -17,11 +17,13 @@ block content
 				img.header-image(src="/images/header-image.png" alt="header-image")
 				div.container
 					div.heading-text
-						h1 Het antwoord als je geen idee hebt wat je wil eten.
+						h1 De oplossing als je geen idee hebt wat je wil eten.
 						br
 						div.small-text
 							br
-							p Telkens iets nieuws verzinnen is best lastig. En als je het al niet weet, helpt de vraag: "Heb je zin in pasta, of rijst?" ook niet. Daarom selecteert de Wat Eten We app de beste recepten, gebaseerd op jouw huidige 'mood'. Nieuwschierig? Probeer het!
+							p 
+								strong “Wat zullen we vanavond eten?” 
+								| Een vraag die waarschijnlijk iedere dag minstens één keer langskomt. Niet gemakkelijk dus, om telkens met een origineel idee te komen. En soms weet je ook gewoon niet waar je ‘zin in hebt’. Daarom selecteert de Wat Eten We app de beste recepten, gebaseerd op jouw huidige mood. Nieuwschierig? Probeer het!
 						br
 						br
 						a(href="#quiz")
@@ -32,42 +34,24 @@ block content
 			div.container
 				div#about.row
 					div.col-12.col-sm-12.col-md-4.col-lg-4.about-wrapper
-						br
-						br
-						br
-						br
-						img.img-about(src="/images/icons-1.png" alt="surprise")
-						br
-						br
-						br
-						br
-						h5.text-center Verassende resultaten
-						p.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum repellendus iste temporibus non in reiciendis laborum facere tempore quae nesciunt porro earum, soluta nam possimus placeat quasi magni fugit quia aspernatur facilis ratione quo dolore.
+						div.about-img-wrapper
+							img.img-about.mx-auto.d-block(src="/images/icons-1.png" alt="surprise")
+						div
+							h5.text-center Verassende resultaten
+							p.text-justify Willekeurige uitkomsten? Zeker niet. Alle voorgestelde recepten passen bij jouw huidige situatie en zijn bewust gekozen op basis van verschillende psychologische factoren.
+								i  It’s science bro!
 					div.col-12.col-sm-12.col-md-4.col-lg-4.about-wrapper
-						br
-						br
-						br
-						br
-						img.img-about(src="/images/icons-2.png" alt="cooking")
-						br
-						br
-						br
-						br
-						br
-						h5.text-center Nooit meer hetzelfde koken
-						p.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum repellendus iste temporibus non in reiciendis laborum facere tempore quae nesciunt porro earum, soluta nam possimus placeat quasi magni fugit quia aspernatur facilis ratione quo dolore.
+						div.about-img-wrapper
+							img.img-about.mx-auto.d-block(src="/images/icons-2.png" alt="cooking")
+						div
+							h5.text-center Nooit meer hetzelfde koken
+							p.text-justify Mensen zijn verassend voorspelbaar. Wanneer je besluit wat je vanavond wil gaan eten, heb je de neiging om opzoek te gaan naar dingen die je al kent. Wat Eten We app biedt je daarom originele en verassende opties om jou uit die comfort-zone te trekken.
 					div.col-12.col-sm-12.col-md-4.col-lg-4.about-wrapper
-						br
-						br
-						br
-						br
-						img.img-about(src="/images/icons-3.png" alt="posibilities")
-						br
-						br
-						br
-						br
-						h5.text-center Meer dan 576 mogelijkheden
-						p.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum repellendus iste temporibus non in reiciendis laborum facere tempore quae nesciunt porro earum, soluta nam possimus placeat quasi magni fugit quia aspernatur facilis ratione quo dolore.
+						div.about-img-wrapper
+							img.img-about.mx-auto.d-block(src="/images/icons-3.png" alt="posibilities")
+						div
+							h5.text-center Nooit meer hetzelfde koken
+							p.text-justify Elk antwoord telt. Op basis van 281 mogelijke antwoordcombinaties krijg jij 12 recepten te zien die precies aansluiten bij jouw huidige mood. Je hoeft dus niet bang te zijn twee keer dezelfde selectie te zien.
 				br
 				br
 	
@@ -75,12 +59,13 @@ block content
 	div.col-12.col-sm-12
 		div#quiz.row
 			div.logo-wrapper
-				img(src="/images/logo1.png" alt="logo")
+				img(src="/images/logo_licht.png" alt="logo")
 			form(action="/filter" method="post")
 
 				//- QUESTION ONE ------------------------------------------
 				div.questionbox.Q1
 					div.selected-input.input-preview.input-preview-Q1 Ik eet samen met...
+					
 					div.input-Q1.input-1(data-val="Ik eet met vrienden") 
 						label
 							input(type="checkbox" value="friends" name="Q1")

@@ -15,7 +15,7 @@ body {
 }
 
 #quiz {
-	min-height: 130vh;
+	height: 700px;
 	/* Permalink http://colorzilla.com/gradient-editor/#3d9f99+0,6de0a9+53,6de0a9+53,79fcba+100 */
 	background: #3d9f99; /* Old browsers */
 	background: -moz-linear-gradient(-45deg, #3d9f99 0%, #6de0a9 53%, #6de0a9 53%, #79fcba 100%); /* FF3.6-15 */
@@ -50,7 +50,7 @@ nav.navbar.navbar-expand-lg.navbar-dark {
 	position: relative;
 }
 
-.header-image {
+.header-image { 
 	width: 100%;
 }
 
@@ -87,7 +87,8 @@ nav.navbar.navbar-expand-lg.navbar-dark {
 }
 
 .start-btn:hover {
-	background-color: #CAC3F7;
+	border: 1px solid #FE5D26;
+	background-color: #F2C078;
 }
 
 /* ---------------------------------------------------------------------------
@@ -99,7 +100,13 @@ nav.navbar.navbar-expand-lg.navbar-dark {
 	align-content: center;
 }
 
+.about-img-wrapper {
+	margin-top: 100px;
+	height: 300px;
+}
+
 .img-about {
+	max-width: 300px;
 	width: 70%;
 }
 
@@ -236,7 +243,7 @@ div.active input[type="checkbox"] + span:hover {
 }
 
 #submit-btn:hover {
-	background-color: #CAC3F7;
+	background-color: #fd8a25;
 	-moz-transition: all 0.3s;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
@@ -329,7 +336,7 @@ h5 {
 ------------------------------------------------------------------------------*/
 
 .footer-columns{
-	background-color: #292c2f;
+	background-color: #C9FFE2;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
@@ -337,7 +344,7 @@ h5 {
 	font: bold 16px sans-serif;
 
 	padding: 55px 50px;
-	margin-top: 80px;
+	/*margin-top: 80px;*/
 }
 
 .footer-columns .footer-left,
@@ -354,7 +361,7 @@ h5 {
 }
 
 .footer-columns .footer-left p span{
-	color: #8f9296;
+	color: #003E1F;
 	display: block;
 	font-weight: normal;
 	font-size: 16px;
@@ -362,8 +369,8 @@ h5 {
 }
 
 .footer-columns .footer-links{
-	color:  #ffffff;
-	margin: 20px 0 12px;
+	color:  #003E1F;
+	margin: 50px 0 12px 0px;
 	padding: 0px;
 }
 
@@ -380,7 +387,7 @@ h5 {
 }
 
 .footer-columns .footer-copyright{
-	color:  #8f9296;
+	color: #003E1F;
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;
@@ -393,7 +400,7 @@ h5 {
 }
 
 .footer-columns .footer-center i{
-	background-color:  #33383b;
+	background-color: #003E1F;
 	color: #ffffff;
 	font-size: 25px;
 	width: 38px;
@@ -412,20 +419,20 @@ h5 {
 
 .footer-columns .footer-center p{
 	display: inline-block;
-	color: #ffffff;
+	color: #2B4162;
 	vertical-align: middle;
 	margin:0;
 }
 
 .footer-columns .footer-center p span{
-	display:block;
+	display:block;	
 	font-weight: normal;
 	font-size:14px;
 	line-height:2;
 }
 
 .footer-columns .footer-center p a{
-	color:  #5383d3;
+	color:  #003E1F;
 	text-decoration: none;;
 }
 
@@ -437,7 +444,7 @@ h5 {
 
 .footer-columns .footer-disclaimer{
 	line-height: 20px;
-	color:  #92999f;
+	color:  #003E1F;
 	font-size: 13px;
 	font-weight: normal;
 	margin: 0;
@@ -445,7 +452,7 @@ h5 {
 
 .footer-columns .footer-disclaimer span{
 	display: block;
-	color:  #ffffff;
+	color:  #003E1F;
 	font-size: 14px;
 	font-weight: bold;
 	margin-bottom: 20px;
@@ -460,7 +467,7 @@ h5 {
 	width: 35px;
 	height: 35px;
 	cursor: pointer;
-	background-color:  #33383b;
+	background-color: #003E1F;
 	border-radius: 2px;
 
 	font-size: 20px;
@@ -483,26 +490,63 @@ h5 {
 		font-size: 1em;
 	}
 
+	#about > div > h5 {
+		font-size: 2em;
+	}
+
+	.about-img-wrapper {
+		margin-top: 80px;
+		height: 250px;
+	}
+
+	.img-about {
+		width: 230px;
+	}
+
+	#quiz {
+		height: 700px;
+	}
+
+
+	/*HEADER SETTINGS*/
 	.small-text {
 		display: none;
 	}
 
 	.heading-text {
-		top: 50px;
+		top: 30px;
+	}
+
+	.start-btn {
+		padding: 7px 10px 7px 10px;
+		font-size: 10px;
+		border-radius: 5px;
 	}
 }
 
 /*Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) { ... }
+@media (min-width: 576px) {
+	
+	#about > div > h5 {
+		font-size: 1.2em;
+	}
+
+}
 
 /*Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) { ... }
+@media (min-width: 768px) {
+	
+	#about > div > h5 {
+		font-size: 1.2em;
+	}
+}
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) { ... }
 
 /*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) { 
+	
 	.heading-text {
 		width: 40%;
 	}

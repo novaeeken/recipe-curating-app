@@ -1,4 +1,4 @@
-//make loader screeb invisible
+//make loader screen invisible
 $('.loader-wrapper').toggle();
 
 // hide all questions and button, except Q1
@@ -25,14 +25,27 @@ $(document).ready(function() {
 		setTimeout( () => { $('.Q4').toggle(); }, 1800);
 	})
 
+	// when forth question is clicked
+	$('.input-preview-Q4').on("click", function() {
+		$("#quiz").animate({height: "900px"}, 700);
+	})
+
 	// when forth question is answered 
 	$('.input-Q4, #input-Q4').on("click", function() {
 		setTimeout( () => { $('.Q5').toggle(); }, 1800);
 	})
 
+	// when last question is clicked
+	$('.input-preview-Q5').on("click", function() {
+		$("#quiz").animate({height: "1050px"}, 700);
+	})
+
 	// when last question is answered 
 	$('.input-Q5, #input-Q5').on("click", function() {
-		setTimeout( () => { $('#submit-btn').toggle(); }, 1800);
+		setTimeout( () => { 
+			$('#submit-btn').toggle(); 
+			$("#quiz").animate({height: "700px"}, 700);
+		}, 1800);	 
 	})
 
 	// if form is submitted

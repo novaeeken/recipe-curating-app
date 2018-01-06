@@ -98,30 +98,30 @@ style.
 
 	/* styling of question */
 	.questionbox > div.input-preview {
-	  color: rgba(255, 255, 255, 0.75);
-	  position: relative;
-	  transition: .3s all ease;
+		color: rgba(255, 255, 255, 0.75);
+		position: relative;
+		transition: .3s all ease;
 	}
 
 	/* after question is clicked, make font more opaque */
 	.questionbox > div.input-preview.active {
-	  color: white;
+		color: white;
 	}
 
 	/* polygon styling before clicked */
 	.questionbox > div.input-preview:before {
-	  content: "";
-	  position: absolute;
-	  top: 18px;
-	  right: 20px;
-	  bottom: 20px;
-	  width: 20px;
-	  background: rgba(255, 255, 255, 0.75);
-	  -webkit-clip-path: polygon(50% 73%, 0 0, 100% 0);
-	  clip-path: polygon(50% 73%, 0 0, 100% 0);
-	  padding: 10px;
-	  box-sizing: border-box;
-	  transition: .3s all ease;
+		content: "";
+		position: absolute;
+		top: 18px;
+		right: 20px;
+		bottom: 20px;
+		width: 20px;
+		background: rgba(255, 255, 255, 0.75);
+		-webkit-clip-path: polygon(50% 73%, 0 0, 100% 0);
+		clip-path: polygon(50% 73%, 0 0, 100% 0);
+		padding: 10px;
+		box-sizing: border-box;
+		transition: .3s all ease;
 	}
 
 	/* polygon styling after clicked */
@@ -129,4 +129,11 @@ style.
 		background: white;
 		-webkit-clip-path: polygon(50% 0, 0 73%, 100% 73%);
 		clip-path: polygon(50% 0, 0 73%, 100% 73%);
+	}
+
+	@media (max-width: 575px) {
+
+		.questionbox > div {
+			font-size: 1.1rem;
+		}
 	}

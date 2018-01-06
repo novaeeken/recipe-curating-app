@@ -19,13 +19,13 @@ html
 				nav.navbar.navbar-expand-lg.navbar-dark
 					div.container
 						a.navbar-brand(href="/")
-							img(src="/images/logo1.png" width="220" heigth="50" alt="logo")
+							img.img-responsive(src="/images/logo_licht.png" width="220" heigth="50" alt="logo")
 						button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation")
 							span.navbar-toggler-icon
 						div#navbarNavAltMarkup.collapse.navbar-collapse
 							div.navbar-nav.ml-auto
-								a.nav-item.nav-link.nav-coloring(href="#" style="color: white;") FAQ
 								a.nav-item.nav-link.nav-coloring(href="#about" style="color: white;") About
+								a.nav-item.nav-link.nav-coloring(href="#" style="color: white;") Disclaimer
 								a.nav-item.nav-link.nav-coloring(href="#" style="color: white;") Contact
 		main
 
@@ -33,15 +33,15 @@ html
 
 		footer.footer-columns
 			div.footer-left
-				img(src="/images/logo1.png" width="280" heigth="50" alt="logo")
+				img(src="/images/logo_donker.png" width="280" heigth="50" alt="logo")
 				br
 				p 
-					span Het antwoord als je geen idee hebt wat je wil eten.
+					span De oplossing als je geen idee hebt wat je wil eten.
 				p.footer-links
 					a(href='#') Home •  
-					a.padded(href='#') FAQ • 
 					a.padded(href='#') About • 
-					a.padded(href='#') Disclaimer
+					a.padded(href='#') Disclaimer • 
+					a.padded(href='#') Contact
 				p.footer-copyright Nova Eeken &copy; 2017
 			div.footer-center
 				div
@@ -59,7 +59,7 @@ html
 			div.footer-right
 				p.footer-disclaimer
 					span Disclaimer
-					| Bij het weergeven van suggesties wordt gebruik gemaakt van de recepten van derden. ‘Wat Eten We’ aanvaardt daarom geen aansprakelijkheid of verantwoordelijkheid voor de inhoud, het gebruik, of de beschikbaarheid van recepten waarnaar wordt verwezen. 
+					| Bij het weergeven van suggesties wordt gebruik gemaakt van de recepten van derde partijen. Wij aanvaren daarom geen aansprakelijkheid of verantwoordelijkheid voor de inhoud, het gebruik, of de beschikbaarheid van recepten waarnaar wordt verwezen. 
 					a(href='#') Lees hier meer.
 				.footer-icons
 					a(href='#')
@@ -79,10 +79,6 @@ html
 	script(src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js")
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/TextPlugin.min.js")
 	//- own scripts
-	script(src="/js/q1.js")
-	script(src="/js/q2.js")
-	script(src="/js/q3.js")
-	script(src="/js/q4.js")
-	script(src="/js/q5.js")
+	script(src="/js/quiz.js")
 	script(src="/js/smoothscroll.js")
 	script(src="/js/main.js")
